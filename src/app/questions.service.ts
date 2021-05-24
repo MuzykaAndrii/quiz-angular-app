@@ -4,14 +4,12 @@ import { HttpClient} from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Quiz, Question } from './quiz.model';
 
-// @Injectable decorator (function that augments a piece of code) 
-// tells Angular that this service will be available everywhere
+
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionsService {
-  // contains namespace and type; 
-  //shortcut for: constructor(http: HttpClient){this.http = http;}
+
   constructor(private http: HttpClient) {
    }
    public getQuizzes() {
